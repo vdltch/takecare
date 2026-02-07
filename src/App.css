@@ -55,6 +55,38 @@
   color: #f8fffb;
 }
 
+.lang-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.25rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(67, 108, 102, 0.15);
+}
+
+.lang-btn {
+  border: 0;
+  border-radius: 999px;
+  padding: 0.35rem 0.65rem;
+  font: inherit;
+  font-weight: 700;
+  color: #2d625d;
+  background: transparent;
+  cursor: pointer;
+  transition: background-color 200ms ease, color 200ms ease;
+}
+
+.lang-btn.active {
+  background: linear-gradient(120deg, #2f7c6f, #3f988b);
+  color: #f8fffb;
+}
+
+.lang-btn:focus-visible {
+  outline: 3px solid rgba(31, 84, 77, 0.45);
+  outline-offset: 2px;
+}
+
 .ambient {
   position: absolute;
   border-radius: 999px;
@@ -136,7 +168,9 @@
 .cta-discord:focus-visible,
 .contact-form button:focus-visible,
 .contact-form input:focus-visible,
-.contact-form textarea:focus-visible {
+.contact-form textarea:focus-visible,
+.emergency-card select:focus-visible,
+.cta-emergency:focus-visible {
   outline: 3px solid rgba(31, 84, 77, 0.45);
   outline-offset: 3px;
 }
@@ -195,6 +229,95 @@
 
 .page-intro {
   animation: riseIn 0.9s ease-out both;
+}
+
+.emergency-grid {
+  margin-top: 1.6rem;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1.2fr 1fr;
+}
+
+.emergency-card {
+  padding: 1.1rem;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.76);
+  border: 1px solid rgba(67, 108, 102, 0.13);
+  box-shadow: 0 12px 30px rgba(47, 85, 79, 0.1);
+}
+
+.emergency-card label {
+  display: block;
+  margin-bottom: 0.4rem;
+  color: #244f4a;
+  font-weight: 700;
+}
+
+.emergency-card select {
+  width: 100%;
+  border: 1px solid rgba(71, 111, 106, 0.25);
+  border-radius: 12px;
+  padding: 0.72rem 0.75rem;
+  background: rgba(255, 255, 255, 0.9);
+  color: #173f3b;
+  font: inherit;
+  margin-bottom: 0.85rem;
+}
+
+.emergency-number {
+  margin: 0.2rem 0 0.9rem;
+  color: #275452;
+}
+
+.emergency-number span {
+  font-weight: 700;
+}
+
+.cta-emergency {
+  display: inline-block;
+  border-radius: 999px;
+  padding: 0.78rem 1rem;
+  font-weight: 700;
+  color: #f8fffb;
+  background: linear-gradient(120deg, #2f7c6f, #3f988b);
+  box-shadow: 0 10px 22px rgba(50, 124, 112, 0.25);
+  transition: transform 220ms ease, box-shadow 220ms ease;
+}
+
+.cta-emergency:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 26px rgba(50, 124, 112, 0.32);
+}
+
+.emergency-mobile-hint {
+  margin: 0.7rem 0 0;
+  color: #356460;
+}
+
+.emergency-qr-card h2 {
+  margin: 0 0 0.8rem;
+  color: #1e524d;
+}
+
+.qr-shell {
+  width: fit-content;
+  padding: 0.7rem;
+  border-radius: 16px;
+  background: #ffffff;
+  border: 1px solid rgba(67, 108, 102, 0.2);
+  box-shadow: 0 10px 20px rgba(47, 85, 79, 0.12);
+}
+
+.emergency-qr-card p {
+  margin: 0.9rem 0 0;
+  color: #31635e;
+  line-height: 1.55;
+}
+
+.emergency-disclaimer {
+  margin: 1rem 0 0;
+  color: #2f5f59;
+  font-weight: 700;
 }
 
 .contact-form {
@@ -303,8 +426,17 @@
     align-items: flex-start;
   }
 
+  .lang-switch {
+    align-self: flex-start;
+  }
+
   .topics-grid,
-  .resource-grid {
+  .resource-grid,
+  .emergency-grid {
     grid-template-columns: 1fr;
+  }
+
+  .emergency-qr-card {
+    display: none;
   }
 }
