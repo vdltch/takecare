@@ -1,3 +1,12 @@
+/*
+ __      _______ _____ ____  _____  ______            _____ ______ _   _  _______     __
+ \ \    / /_   _/ ____/ __ \|  __ \|  ____|     /\   / ____|  ____| \ | |/ ____\ \   / /
+  \ \  / /  | || |   | |  | | |  | | |__       /  \ | |  __| |__  |  \| | |     \ \_/ /
+   \ \/ /   | || |   | |  | | |  | |  __|     / /\ \| | |_ |  __| | . ` | |      \   /
+    \  /   _| || |___| |__| | |__| | |____   / ____ \ |__| | |____| |\  | |____   | |
+     \/   |_____\_____\____/|_____/|______| /_/    \_\_____|______|_| \_|\_____|  |_|
+*/
+
 import './App.css'
 import { useEffect, useState } from 'react'
 import type { FormEvent } from 'react'
@@ -85,16 +94,16 @@ const copyByLang: Record<Lang, Copy> = {
     navContact: 'Contact anonyme',
     navEmergency: 'Urgences',
     switchLabel: 'Langue',
-    homeTagline: 'COMMUNAUTE TAKE CARE',
-    homeTitle: 'Un espace pour parler sante mentale, sans jugement.',
+    homeTagline: 'COMMUNAUTÉ TAKE CARE',
+    homeTitle: 'Un espace pour parler de santé mentale, sans jugement.',
     homeCopy:
-      'Addictions, TDAH, TDC et autres difficultes du quotidien: ici, on partage des ressources, du soutien et des experiences vecues.',
+      'Addictions, TDAH, TDC et autres difficultés du quotidien : ici, on partage des ressources, du soutien et des expériences vécues.',
     joinDiscord: 'Rejoindre le serveur Discord',
     inviteNote: "Espace communautaire d'écoute et d'entraide.",
     topics: [
       {
         title: 'Addiction',
-        body: 'Echanger avec des personnes qui comprennent les hauts, les rechutes et les progrès.',
+        body: 'Échanger avec des personnes qui comprennent les hauts, les rechutes et les progrès.',
       },
       {
         title: 'TDAH',
@@ -112,7 +121,7 @@ const copyByLang: Record<Lang, Copy> = {
     resources: [
       {
         title: 'Urgence et crise',
-        body: 'Numéros d urgence, ligne de prévention du suicide, et contacts de proximité.',
+        body: "Numéros d'urgence, ligne de prévention du suicide et contacts de proximité.",
       },
       {
         title: 'Suivi professionnel',
@@ -120,11 +129,11 @@ const copyByLang: Record<Lang, Copy> = {
       },
       {
         title: 'Outils quotidiens',
-        body: 'Méthodes d’organisation TDAH, routines anti-stress, et supports pour prévenir les rechutes.',
+        body: "Méthodes d'organisation TDAH, routines anti-stress et supports pour prévenir les rechutes.",
       },
       {
         title: 'Groupes de parole',
-        body: 'Associations, groupes d’entraide locaux, et communautés en ligne bienveillantes.',
+        body: "Associations, groupes d'entraide locaux et communautés en ligne bienveillantes.",
       },
     ],
     contactTagline: 'CONTACT ANONYME',
@@ -132,28 +141,28 @@ const copyByLang: Record<Lang, Copy> = {
     contactIntro:
       'Ce formulaire est pensé pour laisser une demande, un témoignage ou un besoin de soutien en restant anonyme.',
     contactTopic: 'Sujet',
-    contactTopicPlaceholder: 'Ex: besoin de soutien après une rechute',
+    contactTopicPlaceholder: 'Ex. : besoin de soutien après une rechute',
     contactMessage: 'Message',
     contactMessagePlaceholder: 'Écris librement, sans nom ni informations personnelles.',
     contactReply: 'Réponse (optionnel)',
-    contactReplyPlaceholder: 'Pseudo Discord ou email si tu veux une réponse',
+    contactReplyPlaceholder: 'Pseudo Discord ou e-mail si tu veux une réponse',
     contactSubmit: 'Envoyer anonymement',
     contactFeedback: 'Message envoyé. Merci pour ta confiance.',
     emergencyTagline: 'URGENCES',
     emergencyTitle: 'Trouver rapidement le bon numéro selon ta situation.',
     emergencyIntro:
-      'Électionne ton pays et le type d urgence. Le bouton lance directement l appel, et le QR code desktop te permet de transférer l action sur ton téléphone.',
+      "Sélectionne ton pays et le type d'urgence. Le bouton lance directement l'appel, et le QR code desktop te permet de transférer l'action sur ton téléphone.",
     emergencyCountryLabel: 'Pays',
-    emergencyTypeLabel: 'Type d urgence',
+    emergencyTypeLabel: "Type d'urgence",
     emergencyCallNow: 'Appeler maintenant',
-    emergencyNumberLabel: 'Numero cible',
-    emergencyQrTitle: 'Scanner sur telephone',
-    emergencyQrHint: 'Depuis un ordinateur, scanne ce QR code pour ouvrir directement l appel sur ton mobile.',
-    emergencyMobileHint: 'Sur mobile, utilise le bouton d appel ci-dessus.',
+    emergencyNumberLabel: 'Numéro cible',
+    emergencyQrTitle: 'Scanner sur téléphone',
+    emergencyQrHint: "Depuis un ordinateur, scanne ce QR code pour ouvrir directement l'appel sur ton mobile.",
+    emergencyMobileHint: "Sur mobile, utilise le bouton d'appel ci-dessus.",
     emergencyDisclaimer:
-      'Si la situation est immediate et grave, appelle les secours tout de suite. Les numéros peuvent varier selon les pays.',
+      'Si la situation est immédiate et grave, appelle les secours tout de suite. Les numéros peuvent varier selon les pays.',
     emergencyCountries: {
-      us: 'Etats-Unis',
+      us: 'États-Unis',
       fr: 'France',
       be: 'Belgique',
       ch: 'Suisse',
@@ -161,8 +170,8 @@ const copyByLang: Record<Lang, Copy> = {
     },
     emergencyTypes: {
       mental: 'Crise psychologique ou suicidaire',
-      medical: 'Urgence medicale',
-      danger: 'Danger immediat ou violence',
+      medical: 'Urgence médicale',
+      danger: 'Danger immédiat ou violence',
     },
   },
   en: {
